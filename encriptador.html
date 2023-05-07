@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/encriptador.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <div class="switch">
+      <input class="switch__input" type="checkbox" id="themeSwitch">
+      <label aria-hidden="true" class="switch__label" for="themeSwitch">On</label>
+      <div aria-hidden="true" class="switch__marker"></div>
+    </div>
+  </head>
+  <body>
+    <img class="logo"></img><h1><strong>Encriptador Alura Desafío 1</strong></h1>
+    <main class="container">
+      
+        <div class="leftColumn">
+          <textarea
+            name="text_area1"
+            id="text_area1"
+            cols="30"
+            rows="10"
+            class="text_area1"
+            placeholder="Ingrese su texto aquí"
+            autofocus
+            onkeypress="CapLock(event)"
+          ></textarea>
+          <div class="tooltiptext1" id="myTooltip1">
+            
+          </div>
+          <div class="botones">
+            
+            <button class="botonenc" onclick="encrypt(document.getElementById('text_area1').value)">Encriptar</button>
+            <button class="botondec"
+              onclick="decrypt(document.getElementById('enc2').value)"
+            >
+              Desencriptar
+            </button>
+          </div>
+        </div>
+        <div class="rightColumn" id="mensajes">
+          <section class="vacio" id="vacio">
+            <h1><img src="./images/no_text.jpeg" alt="Imágen de mensaje no encontrado" id="imagenSinMensaje"></h1>
+                    <h2 id="sinMensaje">No se ha encontrado ningún mensaje</h2>
+                    <p id="descpripcionSinMensaje">Ingresa el texto que desea encriptar o desencriptar</p>
+          </section>
+          <section>
+          <textarea
+            class="string2"
+            name="enc2"
+            id="enc2"
+            readonly="True"
+            cols="50" rows="12"
+          ></textarea>
+          <div class="tooltip">
+            <button id="btncopy" onclick="copy()" class="btncopy" onmouseout="outFunc()">
+              <span class="tooltiptext" id="myTooltip">Copiar al portapapeles</span>
+              Copiar
+              </button>
+            </div>
+        </section>
+        </div>
+    </main>
+  </body>
+  <script type="text/javascript" src="./src/encriptador.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <footer>
+    <div class="footer">
+      <div class="row">
+      <a href="https://github.com/walterqf" target="_blank"><i class="iconify" data-icon="skill-icons:github-dark" data-width="30" data-height="30"></i></a>
+      <a href="https://gt.linkedin.com/in/walter-quijada-6a1419107" target="_blank"><i class="iconify" data-icon="mdi:linkedin" data-width="30" data-height="30"></i></a>
+      </div>
+      
+      <div class="row">
+      <ul>
+      <li><a href="https://github.com/walterqf" target="_blank">Contacto</a></li>
+      <li><a>Nuestros servicios</a></li>
+      <li><a>Privacidad</a></li>
+      <li><a>Terminos y condiciones</a></li>
+      <li><a>Historia</a></li>
+      </ul>
+      </div>
+      
+      <div class="row">
+      walterqf Copyright © 2023 walterqf - All rights reserved || Designed By: walterqf 
+      </div>
+      </div>
+  </footer>
+  
+</html>

@@ -1,0 +1,1055 @@
+body {
+  background-color: #e5e5e5;
+  font-family: "inter";
+  transition: 1s;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+.text_area1 {
+  height: 50%;
+  margin: 2% auto 0;
+  display: inline-block;
+  font-size: 32px;
+  color: var(--textAreaColor);
+  border: none;
+  background-color: var(--backgroundTexto);
+  resize: none;
+  transition: 1s;
+}
+.string2 {
+  height: 50%;
+  margin: 2% auto 0;
+  display: inline-block;
+  font-size: 32px;
+  color: var(--textAreaColor);
+  border: none;
+  background-color: var(--backgroundTexto);
+  resize: none;
+  transition: 1s;
+}
+textarea:focus {
+  outline: none !important;
+}
+
+::placeholder {
+  color: var(--colorPlaceholder);
+  opacity: 0.5;
+}
+.lb1 {
+  flex: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline;
+  border: none;
+  width: 50px;
+  padding-bottom: 5%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.leftColumn {
+  width: 60%;
+  padding: 10px;
+  float: left;
+}
+.rightColumn {
+  float: right;
+  background-color: var(--backgroundMensajes);
+  text-align: center;
+  width: 35%;
+  height: 90%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
+}
+.rightColumn img {
+  width: 80%;
+}
+
+#imagenSinMensaje {
+  visibility: visible;
+}
+
+.rightColumn h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.rightColumn p {
+  margin: 2%;
+  font-size: 16px;
+}
+
+#vacio {
+  padding: 30px 20px;
+}
+
+#enc2 {
+  width: 100%;
+  height: 90%;
+  font-size: 24px;
+  color: grey;
+  text-align: left;
+  visibility: visible;
+  background-color: var(--backgroundMensajes);
+  display: none;
+}
+
+#sinMensaje {
+  visibility: visible;
+}
+
+#descripcionSinMensaje {
+  visibility: visible;
+}
+
+@media (max-width: 1024px) {
+  .text_area1,
+  .botones {
+    display: block;
+    width: 100%;
+    margin: 5% auto;
+  }
+
+  .leftColumn {
+    width: 60%;
+    height: 90%;
+    padding: 10px;
+    float: left;
+  }
+  .rightColumn {
+    float: right;
+    background-color: var(--backgroundMensajes);
+    text-align: center;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+  }
+  .rightColumn img {
+    width: 80%;
+  }
+  .rightColumn h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .rightColumn p {
+    margin: 2%;
+    font-size: 16px;
+  }
+
+  .vacio {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .botonenc,
+  .botondec {
+    width: 45%;
+    margin: 2%;
+    padding: 2% 0;
+  }
+
+  .botondec:hover,
+  .btncopy:hover {
+    background-color: #d8dfe8;
+  }
+
+  .botonenc:hover {
+    background-color: darkblue;
+  }
+  .text_area1 {
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--textAreaColor);
+    border: none;
+    background-color: var(--backgroundTexto);
+    resize: none;
+    transition: 1s;
+  }
+  .string2 {
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--textAreaColor);
+    border: none;
+    background-color: var(--backgroundTexto);
+    resize: none;
+    transition: 1s;
+  }
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
+
+@media (max-width: 720px) {
+  .text_area1,
+  .botones {
+    display: block;
+    width: 100%;
+    margin: 5% auto;
+  }
+  .leftColumn {
+    width: 60%;
+    height: 90%;
+    padding: 10px;
+    float: left;
+  }
+  .rightColumn {
+    float: right;
+    background-color: var(--backgroundMensajes);
+    text-align: center;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+  }
+  .rightColumn img {
+    width: 80%;
+  }
+  .rightColumn h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .rightColumn p {
+    margin: 2%;
+    font-size: 16px;
+  }
+
+  .vacio {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .botonenc,
+  .botondec {
+    width: 45%;
+    margin: 2%;
+    padding: 2% 0;
+  }
+
+  .botondec:hover,
+  .btncopy:hover {
+    background-color: #d8dfe8;
+  }
+
+  .botonenc:hover {
+    background-color: darkblue;
+  }
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
+
+@media (orientation: landscape) {
+  .text_area1,
+  .botones {
+    display: block;
+    width: 100%;
+    margin: 5% auto;
+  }
+  .leftColumn {
+    width: 60%;
+    height: 90%;
+    padding: 10px;
+    float: left;
+  }
+  .rightColumn {
+    float: right;
+    background-color: var(--backgroundMensajes);
+    text-align: center;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+  }
+  .rightColumn img {
+    width: 80%;
+  }
+  .rightColumn h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .rightColumn p {
+    margin: 2%;
+    font-size: 16px;
+  }
+
+  .text_area1 {
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--textAreaColor);
+    border: none;
+    background-color: var(--backgroundTexto);
+    resize: none;
+    transition: 1s;
+  }
+  .string2 {
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--textAreaColor);
+    border: none;
+    background-color: var(--backgroundTexto);
+    resize: none;
+    transition: 1s;
+  }
+
+  .leftColumn {
+    width: 60%;
+    height: 90%;
+    padding: 10px;
+    float: left;
+  }
+  .rightColumn {
+    float: right;
+    background-color: var(--backgroundMensajes);
+    text-align: center;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+  }
+  .rightColumn img {
+    width: 80%;
+  }
+  .rightColumn h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .rightColumn p {
+    margin: 2%;
+    font-size: 16px;
+  }
+
+  .vacio {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .botonenc,
+  .botondec {
+    width: 45%;
+    margin: 2%;
+    padding: 2% 0;
+  }
+
+  .botondec:hover,
+  .btncopy:hover {
+    background-color: #d8dfe8;
+  }
+
+  .botonenc:hover {
+    background-color: darkblue;
+  }
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 700px) {
+  .text_area1,
+  .botones {
+    display: block;
+    width: 100%;
+    margin: 5% auto;
+  }
+
+  #imagenSinMensaje {
+    display: none;
+  }
+  #text_area1 {
+    height: 12em;
+  }
+  .leftColumn {
+    width: auto;
+    height: auto;
+  }
+  .rightColumn {
+    padding-right: 50%;
+    width: auto;
+    text-align: center;
+    height: auto;
+  }
+  .botonenc,
+  .botondec {
+    width: 100px;
+    margin: 2%;
+    padding: 2% 0;
+  }
+
+  .botondec:hover,
+  .btncopy:hover {
+    background-color: #d8dfe8;
+  }
+
+  .botonenc:hover {
+    background-color: darkblue;
+  }
+
+  #enc2 {
+    height: 9em;
+    width: 200%;
+  }
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+  .btncopy {
+    margin: 2%;
+    width: 150px;
+    height: 40px;
+    padding: 3% 0;
+    padding-bottom: 50%;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
+    border-radius: 15px;
+    border-width: thin;
+    border-color: var(--borderBoton);
+    transition: 1s all;
+    cursor: pointer;
+    display: none;
+    vertical-align: middle;
+    margin-left: 50%;
+  }
+  .vacio{
+    width: 200%;
+    display: block;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 50%;
+  border: none;
+  width: 50px;
+  padding-bottom: 10%;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+#sinMensaje {
+  width: 100%;
+}
+#descripcionSinMensaje {
+  width: 100%;
+}
+
+}
+
+.botonenc {
+  margin: auto;
+  width: 20%;
+  padding: 1% 0;
+  font-size: 16px;
+  color: var(--encriptarText);
+  border: none;
+  background-color: var(--encriptarBackground);
+  border-radius: 15px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.botondec {
+  margin-left: 2%;
+  width: 20%;
+  padding: 1% 0;
+  font-size: 16px;
+  border: var(--borderState);
+  color: var(--copiarDesencText);
+  background-color: var(--copiarDesencBackground);
+  border-width: thin;
+  border-color: var(--borderBoton);
+  border-radius: 15px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.botonenc:hover,
+.botondec:hover,
+.btncopy:hover {
+  background-color: var(--hooverColor);
+}
+.botones {
+  display: block;
+  padding: 0px;
+}
+
+.botones p {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 1%;
+}
+.btncopy {
+  margin: 2%;
+  width: 150px;
+  height: 40px;
+  padding: 3% 0;
+  font-size: 16px;
+  border: var(--borderState);
+  color: var(--copiarDesencText);
+  background-color: var(--copiarDesencBackground);
+  border-radius: 15px;
+  border-width: thin;
+  border-color: var(--borderBoton);
+  transition: 1s all;
+  cursor: pointer;
+  display: none;
+}
+h1{
+display: block;
+font-weight: 18px;
+}
+.logo {
+  width: 40px;
+  height: 35px;
+  filter: brightness(1.1);
+  float: left;
+  margin-left: 10px;
+  content: var(--logo);
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.tooltip1 {
+  position: relative;
+}
+
+.tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip1 .tooltiptext1::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+  opacity: 1;
+}
+.p {
+  color: red;
+}
+
+.footer {
+  padding: 30px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+/* =================================================================*/
+
+:root,
+[data-theme="default"] {
+  --color-primary-darker: hsl(228, 74%, 41%);
+  --color-primary-darker-h: 228;
+  --color-primary-darker-s: 74%;
+  --color-primary-darker-l: 41%;
+  --color-primary-dark: hsl(228, 74%, 51%);
+  --color-primary-dark-h: 228;
+  --color-primary-dark-s: 74%;
+  --color-primary-dark-l: 51%;
+  --color-primary: hsl(228, 74%, 61%);
+  --color-primary-h: 228;
+  --color-primary-s: 74%;
+  --color-primary-l: 61%;
+  --color-primary-light: hsl(228, 74%, 71%);
+  --color-primary-light-h: 228;
+  --color-primary-light-s: 74%;
+  --color-primary-light-l: 71%;
+  --color-primary-lighter: hsl(228, 74%, 81%);
+  --color-primary-lighter-h: 228;
+  --color-primary-lighter-s: 74%;
+  --color-primary-lighter-l: 81%;
+  --color-accent-darker: hsl(355, 90%, 41%);
+  --color-accent-darker-h: 355;
+  --color-accent-darker-s: 90%;
+  --color-accent-darker-l: 41%;
+  --color-accent-dark: hsl(355, 90%, 51%);
+  --color-accent-dark-h: 355;
+  --color-accent-dark-s: 90%;
+  --color-accent-dark-l: 51%;
+  --color-accent: hsl(355, 90%, 61%);
+  --color-accent-h: 355;
+  --color-accent-s: 90%;
+  --color-accent-l: 61%;
+  --color-accent-light: hsl(355, 90%, 71%);
+  --color-accent-light-h: 355;
+  --color-accent-light-s: 90%;
+  --color-accent-light-l: 71%;
+  --color-accent-lighter: hsl(355, 90%, 81%);
+  --color-accent-lighter-h: 355;
+  --color-accent-lighter-s: 90%;
+  --color-accent-lighter-l: 81%;
+  --color-black: hsl(240, 8%, 12%);
+  --color-black-h: 240;
+  --color-black-s: 8%;
+  --color-black-l: 12%;
+  --color-black-light: hsl(240, 8%, 22%);
+  --color-black-light-h: 240;
+  --color-black-light-s: 8%;
+  --color-black-light-l: 22%;
+  --color-black-lighter: hsl(240, 8%, 32%);
+  --color-black-lighter-h: 240;
+  --color-black-lighter-s: 8%;
+  --color-black-lighter-l: 32%;
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-h: 0;
+  --color-white-s: 0%;
+  --color-white-l: 100%;
+  --color-white-dark: hsl(0, 0%, 90%);
+  --color-white-dark-h: 0;
+  --color-white-dark-s: 0%;
+  --color-white-dark-l: 90%;
+  --color-white-darker: hsl(0, 0%, 80%);
+  --color-white-darker-h: 0;
+  --color-white-darker-s: 0%;
+  --color-white-darker-l: 80%;
+  --color-warning-darker: hsl(46, 100%, 41%);
+  --color-warning-darker-h: 46;
+  --color-warning-darker-s: 100%;
+  --color-warning-darker-l: 41%;
+  --color-warning-dark: hsl(46, 100%, 51%);
+  --color-warning-dark-h: 46;
+  --color-warning-dark-s: 100%;
+  --color-warning-dark-l: 51%;
+  --color-warning: hsl(46, 100%, 61%);
+  --color-warning-h: 46;
+  --color-warning-s: 100%;
+  --color-warning-l: 61%;
+  --color-warning-light: hsl(46, 100%, 71%);
+  --color-warning-light-h: 46;
+  --color-warning-light-s: 100%;
+  --color-warning-light-l: 71%;
+  --color-warning-lighter: hsl(46, 100%, 81%);
+  --color-warning-lighter-h: 46;
+  --color-warning-lighter-s: 100%;
+  --color-warning-lighter-l: 81%;
+  --color-success-darker: hsl(94, 48%, 36%);
+  --color-success-darker-h: 94;
+  --color-success-darker-s: 48%;
+  --color-success-darker-l: 36%;
+  --color-success-dark: hsl(94, 48%, 46%);
+  --color-success-dark-h: 94;
+  --color-success-dark-s: 48%;
+  --color-success-dark-l: 46%;
+  --color-success: hsl(94, 48%, 56%);
+  --color-success-h: 94;
+  --color-success-s: 48%;
+  --color-success-l: 56%;
+  --color-success-light: hsl(94, 48%, 66%);
+  --color-success-light-h: 94;
+  --color-success-light-s: 48%;
+  --color-success-light-l: 66%;
+  --color-success-lighter: hsl(94, 48%, 76%);
+  --color-success-lighter-h: 94;
+  --color-success-lighter-s: 48%;
+  --color-success-lighter-l: 76%;
+  --color-bg-h: 0;
+  --color-bg-s: 0%;
+  --color-bg-l: 100%;
+  --color-contrast-lower: hsl(0, 0%, 95%);
+  --color-contrast-lower-h: 0;
+  --color-contrast-lower-s: 0%;
+  --color-contrast-lower-l: 95%;
+  --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-low-h: 240;
+  --color-contrast-low-s: 1%;
+  --color-contrast-low-l: 83%;
+  --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-medium-h: 240;
+  --color-contrast-medium-s: 1%;
+  --color-contrast-medium-l: 48%;
+  --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-high-h: 240;
+  --color-contrast-high-s: 4%;
+  --color-contrast-high-l: 20%;
+  --color-contrast-higher: hsl(240, 8%, 12%);
+  --color-contrast-higher-h: 240;
+  --color-contrast-higher-s: 8%;
+  --color-contrast-higher-l: 12%;
+  --textAreaColor: rgb(19, 38, 92);
+  --colorPlaceholder: darkblue;
+  --backgroundTexto: #e5e5e5;
+  --footerColor: rgb(19, 38, 92);
+  --backgroundMensajes: white;
+  --copiarDesencText: rgb(19, 38, 92);
+  --copiarDesencBackground: #d8dfe8;
+  --encriptarText: white;
+  --encriptarBackground: rgb(19, 38, 92);
+  --borderBoton: rgb(19, 38, 92);
+  --borderState: ridge;
+  --hooverColor: hwb(240 28% 45%);
+
+  --logo: url("https://api.iconify.design/material-symbols/enhanced-encryption-rounded.svg?width=30&height=30");
+}
+
+[data-theme] {
+  background-color: hsl(0, 0%, 100%);
+  background-color: var(--color-bg);
+  color: hsl(240, 4%, 20%);
+  color: var(--color-contrast-high);
+}
+
+@supports (--css: variables) {
+  [data-theme="dark"] {
+    --color-success-darker: hsl(94, 48%, 36%);
+    --color-success-darker-h: 94;
+    --color-success-darker-s: 48%;
+    --color-success-darker-l: 36%;
+    --color-success-dark: hsl(94, 48%, 46%);
+    --color-success-dark-h: 94;
+    --color-success-dark-s: 48%;
+    --color-success-dark-l: 46%;
+    --color-success: hsl(94, 48%, 56%);
+    --color-success-h: 94;
+    --color-success-s: 48%;
+    --color-success-l: 56%;
+    --color-success-light: hsl(94, 48%, 66%);
+    --color-success-light-h: 94;
+    --color-success-light-s: 48%;
+    --color-success-light-l: 66%;
+    --color-success-lighter: hsl(94, 48%, 76%);
+    --color-success-lighter-h: 94;
+    --color-success-lighter-s: 48%;
+    --color-success-lighter-l: 76%;
+    --color-bg: hsl(240, 8%, 12%);
+    --color-bg-h: 240;
+    --color-bg-s: 8%;
+    --color-bg-l: 12%;
+    --color-contrast-lower: hsl(240, 6%, 15%);
+    --color-contrast-lower-h: 240;
+    --color-contrast-lower-s: 6%;
+    --color-contrast-lower-l: 15%;
+    --color-contrast-low: hsl(252, 4%, 25%);
+    --color-contrast-low-h: 252;
+    --color-contrast-low-s: 4%;
+    --color-contrast-low-l: 25%;
+    --color-contrast-medium: hsl(240, 1%, 57%);
+    --color-contrast-medium-h: 240;
+    --color-contrast-medium-s: 1%;
+    --color-contrast-medium-l: 57%;
+    --color-contrast-high: hsl(0, 0%, 89%);
+    --color-contrast-high-h: 0;
+    --color-contrast-high-s: 0%;
+    --color-contrast-high-l: 89%;
+    --color-contrast-higher: hsl(0, 0%, 100%);
+    --color-contrast-higher-h: 0;
+    --color-contrast-higher-s: 0%;
+    --color-contrast-higher-l: 100%;
+    --textAreaColor: white;
+    --colorPlaceholder: white;
+    --backgroundTexto: #1b1b24;
+    --footerColor: white;
+    --backgroundMensajes: #1b1b24;
+
+    --copiarDesencText: rgb(255, 255, 255);
+    --copiarDesencBackground: hsl(214, 5%, 25%);
+    --encriptarText: white;
+    --encriptarBackground: #3c3c68;
+    --borderState: hidden;
+    --hooverColor: hsl(240, 47%, 23%);
+    --logo: url("https://api.iconify.design/ic/round-enhanced-encryption.svg?color=white&width=30&height=30");
+  }
+}
+
+/* =================================================================*/
+:root {
+  /* style */
+  --switch-width: 64px;
+  --switch-height: 32px;
+  --switch-padding: 3px;
+  /* animation */
+  --switch-animation-duration: 0.2s;
+}
+
+.switch {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  position: relative;
+  width: 64px;
+  width: var(--switch-width);
+  height: 32px;
+  height: var(--switch-height);
+  border-radius: 50em;
+  padding: 3px 0;
+  padding: var(--switch-padding) 0;
+  float: right;
+  margin-right: 30px;
+}
+
+.switch__input,
+.switch__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.switch__input {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.switch__input:checked + .switch__label {
+  background-color: hsl(228, 74%, 61%);
+  background-color: var(--color-primary);
+}
+
+.switch__input:checked + .switch__label + .switch__marker {
+  left: calc(100% - 29px);
+  left: calc(100% - var(--switch-height) + var(--switch-padding));
+}
+
+.switch__input:focus + .switch__label,
+.switch__input:active + .switch__label {
+  --color-shadow: hsla(228, 74%, 61%, 0.2);
+  --color-shadow: hsla(
+    var(--color-primary-h),
+    var(--color-primary-s),
+    var(--color-primary-l),
+    0.2
+  );
+  box-shadow: undefined;
+  box-shadow: 0 0 0 3px var(--color-shadow);
+}
+
+.switch__input:focus + .switch__label,
+.switch__input:active + .switch__label {
+  box-shadow: 0 0 0 3px hsla(228, 74%, 61%, 0.2);
+  box-shadow: 0 0 0 3px var(--color-shadow);
+}
+
+.switch__label {
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: hsl(240, 1%, 83%);
+  background-color: var(--color-contrast-low);
+  border-radius: inherit;
+  z-index: 1;
+  transition: background 0.2s;
+  transition: background var(--switch-animation-duration);
+}
+
+.switch__marker {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  background-color: var(--color-white);
+  width: 26px;
+  width: calc(var(--switch-height) - var(--switch-padding) * 2);
+  height: 26px;
+  height: calc(var(--switch-height) - var(--switch-padding) * 2);
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  left: 3px;
+  left: var(--switch-padding);
+  transition: left 0.2s;
+  transition: left var(--switch-animation-duration);
+  will-change: left;
+}
